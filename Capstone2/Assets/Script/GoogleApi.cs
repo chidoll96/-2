@@ -41,6 +41,7 @@ public class GoogleApi : MonoBehaviour
         img.texture = www.texture;
         img.SetNativeSize();
     }
+    
     // Start is called before the first frame update
     void Start()
     {

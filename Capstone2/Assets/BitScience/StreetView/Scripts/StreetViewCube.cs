@@ -92,7 +92,7 @@ namespace BitScience
         {
             get { return _key; }
         }
-
+        
         public float Latitude
         {
             get { return _lat; }
@@ -104,6 +104,7 @@ namespace BitScience
             get { return _long; }
             set { _long = value; }
         }
+        
         #endregion
 
         #region Private Fields
@@ -113,11 +114,15 @@ namespace BitScience
         private float _prevLat;
         private float _prevLong;
         private Cubemap _tempCubeMap;
+        SceneManage bring;
         #endregion
 
         #region Behavriour Overrides
         void Start()
         {
+            bring = GameObject.Find("maplatlon").GetComponent<SceneManage>();
+            _lat = bring.Lati;
+            _long = bring.Longi;
             // set the cubemap size to the correct size
             ResizeTextureSize(Size);
             
